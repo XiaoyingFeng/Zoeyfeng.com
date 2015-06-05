@@ -1,0 +1,34 @@
+.jumbotron{
+	background-image: url("IMG_mainPage.jpg");
+	background-size: 1300px 600px;
+	height: 500px;
+}
+
+.jumbotron h1{
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  color:#fff;
+  font-size: 20px;
+}
+.introdution {
+  background-color: #f7f7f7;
+}
+
+.introdution .container{
+  padding-top: 1cm;
+}
+.introdution p{
+  font-size: 18px;
+  margin-top:15px;
+
+}
+
+.jumbotron .container{
+  position: relative;
+  top: 100px;
+}
+
