@@ -30,29 +30,38 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 
 <body>
-  <nav class="nav">
+   <nav class="nav">
   <div class="container">
     <ul class="nav nav-tabs">
-      <li><a >Feng</a></li>
-      <li><a href="home.html">About </a></li>
-      <li><a href="works.html">Works</a></li>   
+      <div class="navbar-header">
+      <a class="navbar-brand" href="home.html">FENG</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      <li class="active"><a href="works.html">Works</a></li>   
+      <li><a href="profiles.html">Profolies </a></li>
       <li class="active"><a href="contactMe.html">Contact me</a></li>
-    </ul>
+      </ul>
+    </div>
+  </div>
    </div>
   </nav>
+  </nav>
 
-    <div class="introdution">
       <div class="container">
-        <div>
-          <address>
-          <strong>Zoey(Xiaoying) Feng</strong><br>
-          <a href="mailto:#">dorotheafeng30@gmail.com</a><br>
-          <Strong>New York City</Strong>
-         </address>
+        <div class="contact-info">
+          <div class="row">
+            <div class="col-md-6">
+            <address>
+            <Strong>Email: <a href="mailto:#">dorotheafeng30@gmail.com</a></Strong><br>
+            <Strong>New York City</Strong>
+           </address>
+           </div>
+           <div class="col-md-6">
+            <a href="https://www.linkedin.com/profile/view?id=96490661&trk=nav_responsive_tab_profile_pic"><img src="linkedin-icon.png"></a>
+           </div>
+         </div>
        </div>
-        <div id="map-canvas"></div>
       </div>
-    </div><!--/.intrudution-->
-
 </body>
 </html>
