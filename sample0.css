@@ -51,7 +51,6 @@ li{
 }
 
 
-
 .slider.open{
 	overflow-y: hidden;
 	max-height: 500px;
@@ -71,7 +70,7 @@ li{
 	top: 560px;
 }
 
-.content {
+.banner-title {
 	padding-top: 220px;
 }
 #banner h1{
@@ -87,32 +86,40 @@ li{
 #content {
 	width: 100%;
 	position: relative;
-	top:400px;
-	background: #ebebeb;
-	height: 1500px;
 }
 
-.row col-md-6{
-	float: left;
-}
-
-.feed-title {
-	padding-top: 50px;
+.breaking-line {
     border-bottom: 5px dotted  #FFCC00;
 }
 .intro{
- margin-top: 80px;
+ margin-top: 70px;
+ margin-bottom: 70px;
 }
 
-.feed {
-	margin-top: 100px;
-}
 
 .intro p{
     font-family: serif;
 	font-size: 20px;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 70;
+	font-weight: 70;s
 	line-height: 24px;
+}
+
+.feed .col-md-4{
+	background-color:  #FFCC00;
+	padding-top: 30px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.feed h3{
+   color: #545454;
+   margin-bottom: 10px;
+   border-style: solid;
+   border-bottom:  dotted #fff;
+}
+.feed p{
+	   color: #545454;
+	text-align: left;
+	font-size: 18px;
 }
