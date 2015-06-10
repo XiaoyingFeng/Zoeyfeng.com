@@ -20,7 +20,7 @@
 
 .introdution .container{
   padding-top: 1cm;
-}
+}s
 .introdution p{
   font-size: 18px;
   margin-top:15px;
@@ -31,4 +31,27 @@
   position: relative;
   top: 100px;
 }
+.jobDescription .container{
+  margin-top: 20px;
+}
+
+.jobDescription .job{
+  margin-top: 30px;
+  background-color: #f7f7f7;
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 70px;   
+  padding-bottom: 40px; 
+}
+
+
+.jobDescription h4{
+    font-style: italic;
+    font: italic bold Georgia, serif;
+  }
+
+.jobDescription li{
+  font-size: 17px;
+}
+
 
