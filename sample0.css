@@ -106,20 +106,32 @@ li{
 	line-height: 24px;
 }
 
-.feed .col-md-4{
+.feed-item{
+	margin: 6px;
 	background-color:  #FFCC00;
 	padding-top: 30px;
-	padding-right: 50px;
-	padding-left: 50px;
+	padding-right: 18px;
+	padding-left: 20px;
+	padding-bottom: 30px;
 }
-.feed h3{
+.feed-item h3{
    color: #545454;
    margin-bottom: 10px;
    border-style: solid;
    border-bottom:  dotted #fff;
 }
-.feed p{
+.feed-item p{
 	   color: #545454;
 	text-align: left;
 	font-size: 18px;
 }
+footer p{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.feed-item span{
+	float: right;
+	font-size: 25px;
+}
+
