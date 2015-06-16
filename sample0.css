@@ -25,21 +25,16 @@ body {
 	float: right;
 
 }
-a{
+.slidernav{
 	text-decoration: none;
 	color: #fff;
 }
-li{
+.slider{
 	list-style: none;
 	float: left;
 	font-size: 20px;
 	margin-left: 5px;
 	padding-top: 10px;
-}
-
-
-li{
-    display: inline;
 }
 
 
