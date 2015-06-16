@@ -21,7 +21,7 @@ body {
     font-family: adelle,Georgia,Times,serif;
 }
 .nav{
-	margin-right: 50px;
+	padding-right: 50px;
 	float: right;
 
 }
@@ -36,15 +36,7 @@ li{
 	margin-left: 5px;
 	padding-top: 10px;
 }
-#centre {
-  position: relative;
-  max-width: 75em;
-  margin: 0 auto;
-  padding: 0;
-  width: 85%;
-  background: transparent;
 
-}
 
 li{
     display: inline;
@@ -107,24 +99,25 @@ li{
 }
 
 .feed-item{
-	margin: 6px;
+	margin-top: 6px;
 	background-color:  #FFCC00;
 	padding-top: 30px;
-	padding-right: 18px;
-	padding-left: 20px;
 	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: left;
 }
 .feed-item h3{
    color: #545454;
-   margin-bottom: 10px;
    border-style: solid;
    border-bottom:  dotted #fff;
 }
+
 .feed-item p{
-	   color: #545454;
-	text-align: left;
 	font-size: 18px;
+	text-align: left;
 }
+
 footer p{
   margin-top: 50px;
   text-align: center;
@@ -135,3 +128,6 @@ footer p{
 	font-size: 25px;
 }
 
+.dropdown-menu {
+	background-color: #FFCC00;
+}

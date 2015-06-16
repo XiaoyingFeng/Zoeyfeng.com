@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <!--My own css-->
 <link rel="stylesheet" href="sample0.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="sample0.js"></script>
@@ -23,11 +24,26 @@
 			<ul> 
 				<li class="slider"><a href="home.html">HOME</a></li>
 				<li>
-				<a aria-label="right Align">
- 			    <span class="glyphicon glyphicon-align-justify" aria-hidden="true" data-toggle="dropdown" aria-expanded="false"></span>	
- 			    </a>
- 			  </li>		
-		</ul>
+					
+
+<div class="dropdown">
+  <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+   
+    <a aria-label="right Align">
+ 		<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>	
+ 	</a>
+
+  </span>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+ 			  	</li>		
+			</ul>
 	    </div>
 	</div>
 </div>
@@ -71,11 +87,8 @@
 			</div>
 		  </div>
 	  </div><!--intro-->
-     </div><!--contrainer-->	
-</div><!--content-->
 
-<div class="feed">
-  <div class="row">
+    <div class="row">
   	<a href="#">
 	  <div class="col-md-4">
 	  	<div class="feed-item">
@@ -90,8 +103,8 @@
        <div class="col-md-4">
        	<div class="feed-item">
 	  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
-		<h3>Toys</h3>
-		<p>Cats have requirements for their specific dietary nutrients. Certain nutrients, including many vitamins and amino acids, are degraded by the temperatures...</p>
+		<h3>Play&Toys</h3>
+		<p>Cat play behavior can be either solitary (with toys or other objects) or social. They can play with a multitude of toys ranging from strings, to small furry toys resembling what would be prey...</p>
 	   </div>
 	  </div>
 	 </a>
@@ -100,44 +113,48 @@
 	   <div class="col-md-4">
 	   	<div class="feed-item">
 	   	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
-		<h3>Treats</h3>
-		<p>Cats have requirements for their specific dietary nutrients. Certain nutrients, including many vitamins and amino acids, are degraded by the temperatures...</p>
+		<h3>Breed</h3>
+		<p>Cats have a high breeding rate. Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as cat fancy. Failure to control the breeding of pet cats ..</p>
 	  </div>
 	</div>
    </a>
   </div>
 
    <div class="row">
-     <a href="#">
-	  <div class="col-md-4">
-	  	<div class= "feed-item">
-	  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
-	     <h3>Enviroment</h3>
-		<p>Cats have requirements for their specific dietary nutrients. Certain nutrients, including many vitamins and amino acids, are degraded by the temperatures...</p>
-	     </div>
-	  </div>
-	 </a>
-
-	 <a href="#">
-       <div class="col-md-4">
-       	<div class= "feed-item">
-       	 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-		<h3>Behaviour</h3>
-		<p>Cats have requirements for their specific dietary nutrients. Certain nutrients, including many vitamins and amino acids, are degraded by the temperatures...</p>
-	    </div>
-	  </div> 
-	 </a>
-	 <a href="#">
+      <a href="#">
 	   <div class="col-md-4">
 	   	<div class="feed-item">
+	   	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+		<h3>Enviroment</h3>
+		<p>Cats like to organize their environment based on their needs. Like their ancestors, domestic cats still have an inherent desire to maintain an independent territory and are ...</p>
+	  </div>
+	</div>
+
+	   <a href="#">
+	   <div class="col-md-4">
+	   	<div class="feed-item">
+	   	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+		<h3>Behaviour</h3>
+		<p>Cat behavior varies among breeds and individuals, and between colonies. Many common behaviors include hunting, grooming, urine marking, face rubbing. Communication can ...</p>
+	  </div>
+	  </div>
+ 
+      <a href="#">
+	   <div class="col-md-4">
+	  	<div class="feed-item">
 	   	 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-		<h3>Clean</h3>
-		<p>Cats have requirements for their specific dietary nutrients. Certain nutrients, including many vitamins and amino acids, are degraded by the temperatures...</p>
-	    </div>
+		<h3>Health</h3>
+		<p>The health of domestic cats is a well studied area in veterinary medicine. Topics include infectious and genetic diseases, diet and nutrition and non-therapeutic ...</p>
+	  </div>
 	  </div>
 	 </a>
-  </div>
-</div><!--feed-->
+   </div>
+
+	 
+</div><!--contrainer-->	
+</div><!--content-->
+
+
 <footer>
     <p>&copy; 2015 Xiaoying Feng
 </footer>
