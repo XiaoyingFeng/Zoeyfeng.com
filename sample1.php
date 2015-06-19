@@ -91,7 +91,7 @@
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tracking#" class="number">
+            <input type="text" class="form-control" placeholder="Tracking#" id="trackNumber">
           </div>
         <button type="submit" class="btn btn-default" onclick="return foo(); ">Track</button>
         </form>
@@ -99,7 +99,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<?php include 'config.php';?>
+<?php include 'connect.php';?>
 
 
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
