@@ -15,3 +15,11 @@
       margin: auto;
       height: 420px;
   }
+
+.form {
+	margin-top: 200px;
+}
+#litterForm {
+	padding-left: 200px;
+	padding-right: 200px;
+}

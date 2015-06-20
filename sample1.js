@@ -25,8 +25,39 @@ function main(){
     });
 };
 
-function foo(){
-      alert($("#trackNumber").val());
+function track(){
+  // or document.getElementById("txtHint").innerHTML = "";
+     if($("#trackNumber").val() == "") {
+        return;
+     } else {
+        $trackNumber = $("#trackNumber").val();
+     }
 };
 
-$(document).ready(main);
+function input () {
+    //alert(" input submit button clicked");
+    var udxNewShippment  =[];
+    $("input").each(function(){
+        var str = $(this).text();
+        udxNewShippment.push(str);
+    });
+    var stringed = JSON.stringify(udxNewShippment);
+
+    $.ajax(
+    {
+      type: 'post',
+      url: 'insert.php',
+      dataType: 'jason',
+      contentType: 'application/x-www-form-urlencoded',
+      data: $("form").serialize(),
+      success: function( data, textStatus, jQxhr ){
+                    $('#response pre').html( data );
+                    alert(data);
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+    });
+  };
+
+$(document).ready(input);
