@@ -23,6 +23,7 @@ function main(){
     $(".right").click(function(){
         $("#myCarousel").carousel("next");
     });
+
 };
 
 function track(){
@@ -34,30 +35,33 @@ function track(){
      }
 };
 
+
+
+
 function input () {
     //alert(" input submit button clicked");
-    var udxNewShippment  =[];
+    var udxNewShippment  = [];
     $("input").each(function(){
-        var str = $(this).text();
+        var str = $(this).val();
         udxNewShippment.push(str);
     });
     var stringed = JSON.stringify(udxNewShippment);
-
     $.ajax(
     {
-      type: 'post',
-      url: 'insert.php',
-      dataType: 'jason',
-      contentType: 'application/x-www-form-urlencoded',
-      data: $("form").serialize(),
-      success: function( data, textStatus, jQxhr ){
-                    $('#response pre').html( data );
-                    alert(data);
-                },
-                error: function( jqXhr, textStatus, errorThrown ){
-                    console.log( errorThrown );
-                }
+        type: 'post',
+        url: 'insert.php',
+        dataType: 'json',
+        contentType: 'application/x-www-form-urlencoded',
+        data: $("form").serialize(),
+        success: function( data, textStatus, jQxhr ){
+          $('#response pre').html( data );
+          alert(data);
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+        console.log( errorThrown );
+        }
     });
+    return false;
   };
 
-$(document).ready(input);
+$(document).ready(main);
