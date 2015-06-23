@@ -48,17 +48,18 @@
 <!-- information input form -->
 <div class="form">
   <div class="container">
-    <form action="sample1.1.php" method="get">
+    <form action="sample1.1.php" method="post">
       <div class="form-group" id="litterForm">
         <label for="usr">Name:</label>
         <input type="text" class="form-control" name="name">
       </div>    
-      <div class="form-group" id="litterForm" name="item">
+      <div class="form-group" id="litterForm" >
         <label >Item:</label>
-        <select class="form-control">
+        <select class="form-control" name="item">
           <option>Book</option>
-          <option>Cloth</option>
+          <option>Clothing, Shoes & Jewelry</option>
           <option>Electronics</option>
+          <option>Health & Personal Care </option>
           <option>Sport & Outdoor</option>
           <option>Other</option>
         </select>
