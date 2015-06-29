@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,7 +39,7 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Tracking#" id="trackNumber">
           </div>
-        <button type="submit" class="btn btn-default" onclick="return track(); ">Track</button>
+        <button type="submit" class="btn btn-default" onclick="track(); ">Track</button>
         </form>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -48,7 +49,7 @@
 <!-- information input form -->
 <div class="form">
   <div class="container">
-    <form action="sample1.1.php" method="post">
+    <form action="sample1.0.php" method="post">
       <div class="form-group" id="litterForm">
         <label for="usr">Name:</label>
         <input type="text" class="form-control" name="name">
@@ -81,6 +82,7 @@
     </div>
 </div>
 
+<?php include 'sample1.detectFromInput.php' ?>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
