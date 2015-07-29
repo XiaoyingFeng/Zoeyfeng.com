@@ -104,7 +104,6 @@
 ?>
 <div class="container">
     <h2>Thank you! Submitted successfully.</h2>
-    <h3>Your tracking number is:<?php echo $id;?> </h3>
 </div>
 
 
