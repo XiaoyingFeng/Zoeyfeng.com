@@ -2,11 +2,11 @@
 //Sample Database Connection Syntax for PHP and MySQL.
 include 'sensitive.php';
 //Connect To Database
-$connection=mysql_connect($hostname,$username, $password) or die ("<html><script language='JavaScript'>alert('Unable to connect to database! Please try again later.'),history.go(-1)</script></html>");
-$db=mysql_select_db($dbname,$connection);
+$db=mysqli_connect($hostname,$username, $password,$dbname) or die ("<html><script language='JavaScript'>alert('Unable to connect to database! Please try again later.'),history.go(-1)</script></html>");
+
 if(!$db) {
-	//echo "db unselected";
+	echo "db unselected";
 }else {
-	//echo "db selected";
+	echo "db selected";
 }
 ?>

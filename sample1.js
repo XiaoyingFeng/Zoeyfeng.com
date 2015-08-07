@@ -1,3 +1,5 @@
+$recordID;
+
 function main(){
     // Activate Carousel
     $("#myCarousel").carousel();
@@ -26,8 +28,15 @@ function main(){
 
 };
 
-function track(){
+function settingID(number) {
+    $recordID = number;
+}
+
+//function track(){
+    //window.location.replace("trackNumber.php");
+    //return false;
   // or document.getElementById("txtHint").innerHTML = "";
+     /**
      if($("#trackNumber").val() == "") {
          console.log('return');
         return;
@@ -50,9 +59,10 @@ function track(){
         xmlhttp.open("GET","displayTable.php?q="+trackNumber,true);
         xmlhttp.send();
     }
+    **/
 
 
-};
+//};
 
 
 
