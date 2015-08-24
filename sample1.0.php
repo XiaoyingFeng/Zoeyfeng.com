@@ -35,7 +35,7 @@
         <li><a href="#">Shipping Fee</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
+        <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
           <div class="form-group" >
             <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
           </div>
@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<?php include 'sample1.detectFromInput.php' ?>
+<?php include 'sample1.detectFromInput.php';?>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
