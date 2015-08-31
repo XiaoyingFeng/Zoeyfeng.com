@@ -16,15 +16,21 @@
       height: 420px;
   }
 
-.form {
-	margin-top: 200px;
-}
+
 #litterForm {
 	padding-left: 200px;
 	padding-right: 200px;
 }
 
 .container h2{
+	text-align: center;
+}
+
+.container {
+	margin-top: 180px;
+}
+
+.panel-title{
 	text-align: center;
 }
 
