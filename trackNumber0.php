@@ -51,7 +51,10 @@
   <div class="detail_tile" style="background color: #ffffaf";>
     <h2>ID#  <?php include 'connect.php';
     $trackNumber = $_POST["trackNumber"];
-    echo $trackNumber;?></h2>     
+    //echo $trackNumber;
+    //echo "Escaping characters is done \"Like this\".";
+     echo "<a href=\"https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers=". $trackNumber. "\">".$trackNumber."</a>";?>  
+ </h2>
   </div> 
   <div class="row">
     <div class="col-xs-4">

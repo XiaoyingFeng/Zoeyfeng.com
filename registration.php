@@ -128,7 +128,7 @@ exit();
     $insert_user="INSERT INTO users (user_name,user_pass,user_email) VALUE ('$user_name','$user_pass','$user_email')";  
     if(mysqli_query($db,$insert_user))  
     {  
-       echo"<script>alert('reday to open window')</script>";  
+      // echo"<script>alert('reday to open window')</script>";  
        redirect('welcome.php');
        //echo"<script>window.open('http://www.google.com')</script>";  
     }  

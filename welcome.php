@@ -1,11 +1,11 @@
 <?php  
-//session_start();  
+session_start();  
   
-//if(!$_SESSION['email'])  
-//{  
+if(!$_SESSION['email'])  
+{  
   
- //   header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-//}  
+   header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
+}  
   
 ?>  
   
@@ -61,9 +61,9 @@
 
 <div class="container" >
 	<h1>Welcome</h1><br>  
-<!--<?php  
+<?php  
 echo $_SESSION['email'];  
-?>  -->
+?>  
     
 	<h1><a href="logout.php">Logout here</a> </h1>  
 

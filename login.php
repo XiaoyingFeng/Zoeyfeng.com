@@ -1,5 +1,5 @@
 <?php  
-//session_start();//session starts here  
+session_start();//session starts here  
   
 ?>  
   
@@ -85,6 +85,11 @@
 </html>  
   
 <?php  
+function redirect($url, $statusCode = 303)
+{
+   header('Location: ' . $url, true, $statusCode);
+  
+}
   
 include("connect.php");  
   
@@ -93,14 +98,14 @@ if(isset($_POST['login']))
     $user_email=$_POST['email'];  
     $user_pass=$_POST['pass'];  
   
-    $check_user="select * from users WHERE user_email='$user_email'AND user_pass='$user_pass'";  
+    $check_user="SELECT * FROM users WHERE user_email='$user_email'AND user_pass='$user_pass'";  
    
     $run=mysqli_query($db,$check_user);  
   
     if(mysqli_num_rows($run))  
     {  
-        echo "<script>window.open('welcome.php','_self')</script>";  
-  
+       // echo "<script>window.open('welcome.php','_self')</script>";  
+        redirect('welcome.php');
         $_SESSION['email']=$user_email;//here session is used and value of $user_email store in $_SESSION.  
   
     }  
