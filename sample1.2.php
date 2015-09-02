@@ -70,22 +70,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home.html">HOME</a>
+      <a class="navbar-brand" href="home.html">HOMEPAGE</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="sample1.0.php">New Shipment <span class="sr-only">(current)</span></a></li>
+        <li ><a href="sample1.0.php">New Shipment</a></li>
         <li><a href="#">Shipping fee</a></li>
+        <li><a href="registration.php">Registration/Login</a></li>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tracking#" id="trackNumber">
-          </div>
-        <button type="submit" class="btn btn-default" onclick="track(); "> Track</button>
-        </form>
+          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+            <div class="form-group" >
+              <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
+            </div>
+            <button type="submit" class="btn btn-default">Track</button>
+          </form>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

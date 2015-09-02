@@ -31,8 +31,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-           <li ><a href="sample1.0.php">New Shipment</a></li>
+           <li class="active"><a href="sample1.0.php">New Shipment<span class="sr-only">(current)</span></a></li>
           <li><a href="#">Shipping Fee</a></li>
+          <li ><a href="registration.php">Registration/Login</a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
@@ -51,8 +53,8 @@
     <div class="form">  
       <form action="sample1.0.php" method="post">
         <div class="form-group" id="litterForm">
-          <label for="usr">Name:</label>
-          <input type="text" class="form-control" name="name">
+          <label for="usr">Fedex#:</label>
+          <input type="text" class="form-control" name="fedex">
         </div>    
         <div class="form-group" id="litterForm" >
           <label >Item:</label>

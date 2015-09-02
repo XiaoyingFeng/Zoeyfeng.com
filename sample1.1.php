@@ -87,6 +87,8 @@
       <ul class="nav navbar-nav">
         <li ><a href="sample1.0.html">New Shipment <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Shipping fee</a></li>
+         <li><a href="registration.php">Registration/Login</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search">

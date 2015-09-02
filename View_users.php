@@ -1,28 +1,58 @@
-<html>  
-<head lang="en">  
-    <meta charset="UTF-8">  
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
-    <title>View Users</title>  
-</head>  
-<style>  
-    .login-panel {  
-        margin-top: 150px;  
-    }  
-    .table {  
-        margin-top: 50px;  
-  
-    }  
-  
-</style>  
-  
+<!DOCTYPE html>
+<html>
+<head>
+<title>sample1.registration</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="sample1.css">
+</head>
+
 <body>  
-  
-<div class="table-scrol">  
+ <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="sample1.php">HOME</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a href="sample1.0.php">New Shipment</a></li>
+          <li><a href="#">Shipping Fee</a></li>
+          <li><a href="registration.php">Registration/Login<span class="sr-only">(current)</span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+            <div class="form-group" >
+              <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
+            </div>
+            <button type="submit" class="btn btn-default">Track</button>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--retisration ->
+<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->  
+<div class="container">   
+  <div class="table-scrol">  
     <h1 align="center">All the Users</h1>  
   
-<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-  
-  
+    <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <thead>  
   
@@ -37,9 +67,9 @@
         </thead>  
   
         <?php  
-        include("database/db_conection.php");  
-        $view_users_query="select * from users";//select query for viewing users.  
-        $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
+        include("connect.php");  
+        $view_users_query="SELECT * FROM users";//select query for viewing users.  
+        $run=mysqli_query($db,$view_users_query);//here run the sql query.  
   
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  
@@ -65,9 +95,8 @@
   
     </table>  
         </div>  
-</div>  
-  
-  
-</body>  
-  
+    </div>  
+</div>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </html>  

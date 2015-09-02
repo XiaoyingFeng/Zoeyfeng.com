@@ -7,7 +7,7 @@ session_start();//session starts here
 <!DOCTYPE html>
 <html>
 <head>
-<title>sample1</title>
+<title>sample1.login</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Latest compiled and minified CSS -->
@@ -38,6 +38,8 @@ session_start();//session starts here
         <ul class="nav navbar-nav">
            <li ><a href="sample1.0.php">New Shipment</a></li>
           <li><a href="#">Shipping Fee</a></li>
+          <li><a href="registration.php">Registration/Login<span class="sr-only">(current)</span></a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
@@ -85,11 +87,7 @@ session_start();//session starts here
 </html>  
   
 <?php  
-function redirect($url, $statusCode = 303)
-{
-   header('Location: ' . $url, true, $statusCode);
-  
-}
+
   
 include("connect.php");  
   
@@ -105,7 +103,7 @@ if(isset($_POST['login']))
     if(mysqli_num_rows($run))  
     {  
        // echo "<script>window.open('welcome.php','_self')</script>";  
-        redirect('welcome.php');
+      header("Location: welcome.php");//use for the redirection to some page  
         $_SESSION['email']=$user_email;//here session is used and value of $user_email store in $_SESSION.  
   
     }  

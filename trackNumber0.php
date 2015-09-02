@@ -31,8 +31,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="sample1.0.php">New Shipment <span class="sr-only">(current)</span></a></li>
+        <li ><a href="sample1.0.php">New Shipment</a></li>
         <li><a href="#">Shipping Fee</a></li>
+        <li><a href="registration.php">Registration/Login</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
@@ -47,31 +49,35 @@
 </nav> 
 
 <!--main body , display the table-->
-<div class="container" >
+<div class="container" style="
+  padding-left: 150px;
+  padding-right: 150px;">
+
   <div class="detail_tile" style="background color: #ffffaf";>
     <h2>ID#  <?php include 'connect.php';
     $trackNumber = $_POST["trackNumber"];
-    //echo $trackNumber;
+    echo $trackNumber;
     //echo "Escaping characters is done \"Like this\".";
-     echo "<a href=\"https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers=". $trackNumber. "\">".$trackNumber."</a>";?>  
- </h2>
+    $query="SELECT * FROM delivery where id = $trackNumber";
+        if($result=mysqli_query($db,$query)) {
+          $row=mysqli_num_rows($result);
+          if($row == 0){
+              echo '<script language="javascript"> alert("The id number you entered is invalid. Please correct it and retry.") </script>';
+          } else {
+            $row= mysqli_fetch_assoc($result);
+           //mysqli_free_result($result);
+          }
+        }
+     ?>  
+    </h2>
+    <h5>FEDEX tracking# :<?php echo "<a href=\"https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers=". $trackNumber. "\">".$$row["fedex"]."</a>";?></h5>
   </div> 
   <div class="row">
     <div class="col-xs-4">
       <p> Ship Date:</p>
       <p style="border-bottom-style: ridge;"}>
       <?php 
-        $query="SELECT * FROM delivery where id = $trackNumber";
-        if($result=mysqli_query($db,$query)) {
-          $row=mysqli_num_rows($result);
-          if($row == 0){
-            echo "No rows found, nothing to print so am existing"; 
-          } else {
-            $row= mysqli_fetch_assoc($result);
-            echo $row["shipDate"];
-           //mysqli_free_result($result);
-          }
-        }
+         echo $row["shipDate"];
        ?>
        </p>
        <p><?php echo $row["pickUpLocation"];?></p>
@@ -122,7 +128,7 @@
   </div>
 </div>
 
-
+<?php  mysqli_close();?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

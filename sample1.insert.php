@@ -7,18 +7,18 @@ function redirect($url, $statusCode = 303)
   
 }
 //echo "in insert php";
-$name = $_POST["name"];
+$fedex = $_POST["fedex"];
 $item = $_POST["item"];
 $address = $_POST["pickup"];
 $destination = $_POST["desitination"]; 
-if($name ==null || $item == null || $address == null || $destination == null) {
+if($fedex ==null || $item == null || $address == null || $destination == null) {
 	echo '<script language="javascript"> alert("Please fill out this form completely") </script>';
 } else {
 	date_default_timezone_set('America/New York');
 	$today = date("Y-m-d"); 
 	//echo date("Y-m-d H:i:s");
 	// check the id duloicate
- 	$sql = "INSERT INTO delivery"."(name,item,shipDate,pickUpLocation,destination)". "VALUES ('$name','$item' ,'$today','$address','$destination')";
+ 	$sql = "INSERT INTO delivery"."(fedex,item,shipDate,pickUpLocation,destination)". "VALUES ('$fedex','$item' ,'$today','$address','$destination')";
 	
 	$retval = mysqli_query( $db, $sql);
 	$last=mysqli_insert_id($db);
