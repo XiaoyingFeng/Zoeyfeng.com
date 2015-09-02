@@ -1,3 +1,7 @@
+<?php
+  include 'verifylogin.php';//protected page
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,12 +34,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li ><a href="sample1.0.php">New Shipment</a></li>
           <li><a href="#">Shipping Fee</a></li>
           <li><a href="registration.php">Registration/Login<span class="sr-only">(current)</span></a></li>
+          <li><a href="sample1.newshipment.php">New Shipment</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+          <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
             </div>
@@ -73,10 +77,10 @@
   
         while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
         {  
-            $user_id=$row[0];  
-            $user_name=$row[1];  
-            $user_email=$row[2];  
-            $user_pass=$row[3];  
+            $user_id=$row["user_id"];  
+            $user_name=$row["user_name"];  
+            $user_email=$row["user_email"];  
+            $user_pass=$row["user_pass"];  
   
   
   
@@ -97,6 +101,7 @@
         </div>  
     </div>  
 </div>
+
 </body>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </html>  

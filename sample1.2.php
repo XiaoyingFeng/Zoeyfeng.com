@@ -76,13 +76,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="sample1.0.php">New Shipment</a></li>
         <li><a href="#">Shipping fee</a></li>
         <li><a href="registration.php">Registration/Login</a></li>
+        <li ><a href="sample1.newshipment.php">New Shipment</a></li>
+
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+          <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
             </div>
@@ -92,6 +93,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<footer>
+    <p>&copy; 2015 Xiaoying Feng </p>
+</footer>
 
 <div class='container'><h2>Thank you! Submitted successfully. Your tracking number is <?php echo $_GET['id'];?></h2></div>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

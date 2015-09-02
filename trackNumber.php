@@ -31,13 +31,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="sample1.0.php">New Shipment</a></li>
         <li><a href="#">Shipping Fee</a></li>
         <li><a href="registration.php">Registration/Login</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+        <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
           <div class="form-group" >
             <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
           </div>
@@ -48,6 +47,7 @@
   </div>
 </nav> 
 
+
 <!--main body , display the table-->
 <div class="container" style="
   padding-left: 150px;
@@ -57,12 +57,14 @@
     <h2>ID#  <?php include 'connect.php';
     $trackNumber = $_POST["trackNumber"];
     echo $trackNumber;
+    $row;
     //echo "Escaping characters is done \"Like this\".";
     $query="SELECT * FROM delivery where id = $trackNumber";
         if($result=mysqli_query($db,$query)) {
           $row=mysqli_num_rows($result);
           if($row == 0){
               echo '<script language="javascript"> alert("The id number you entered is invalid. Please correct it and retry.") </script>';
+              exit;
           } else {
             $row= mysqli_fetch_assoc($result);
            //mysqli_free_result($result);
@@ -70,7 +72,7 @@
         }
      ?>  
     </h2>
-    <h5>FEDEX tracking# :<?php echo "<a href=\"https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers=". $trackNumber. "\">".$$row["fedex"]."</a>";?></h5>
+    <h5>FEDEX tracking#: <?php echo "<a href=\"https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers=". $row["fedex"]. "\">".$row["fedex"]."</a>";?></h5>
   </div> 
   <div class="row">
     <div class="col-xs-4">
@@ -126,7 +128,11 @@
     </div>
   </div>
   </div>
+  <footer>
+    <p>&copy; 2015 Xiaoying Feng </p>
+</footer>
 </div>
+
 
 <?php  mysqli_close();?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

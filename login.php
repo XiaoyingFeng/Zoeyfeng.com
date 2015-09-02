@@ -36,7 +36,6 @@ session_start();//session starts here
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-           <li ><a href="sample1.0.php">New Shipment</a></li>
           <li><a href="#">Shipping Fee</a></li>
           <li><a href="registration.php">Registration/Login<span class="sr-only">(current)</span></a></li>
 

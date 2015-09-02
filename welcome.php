@@ -44,11 +44,12 @@ if(!$_SESSION['email'])
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-           <li ><a href="sample1.0.php">New Shipment</a></li>
           <li><a href="#">Shipping Fee</a></li>
+           <li ><a href="sample1.newshipment.php">New Shipment</a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+          <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
             </div>
@@ -58,14 +59,18 @@ if(!$_SESSION['email'])
       </div>
     </div>
   </nav>
+  <div class="sub-header">
+      <h6><span class=" glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $_SESSION['email'];?></h6>
+      <h6><a href="logout.php">Logout here</a></h6>  
 
-<div class="container" >
-	<h1>Welcome</h1><br>  
+  </div>
+
+<div class="container" id="special-container">
+  <h1>Welcome</h1><br>  
 <?php  
 echo $_SESSION['email'];  
 ?>  
     
-	<h1><a href="logout.php">Logout here</a> </h1>  
 
 </div>  
 </body>  

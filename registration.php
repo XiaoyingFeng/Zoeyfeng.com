@@ -30,12 +30,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li ><a href="sample1.0.php">New Shipment</a></li>
           <li><a href="#">Shipping Fee</a></li>
           <li><a href="registration.php">Registration/Login<span class="sr-only">(current)</span></a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left" role="search" action="trackNumber0.php" method="post">
+          <form class="navbar-form navbar-left" role="search" action="trackNumber.php" method="post">
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Tracking#" name="trackNumber">
             </div>
@@ -81,9 +81,10 @@
         </div>  
     </div>  
 </div>  
-</body>   
-</html>  
-  
+
+</body> 
+
+<  
 <?php  
   
 include 'connect.php';//make connection here  
@@ -139,4 +140,4 @@ exit();
   
 }  
   
-?>  
+?> 
